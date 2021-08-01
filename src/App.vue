@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <PersonContainer/>
+    <ChatContainer/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ChatContainer from './components/ChatContainer.vue'
+import PersonContainer from './components/PersonContainer.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { ChatContainer, PersonContainer }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    *{
+        padding: 0;
+        margin: 0;
+        vertical-align: baseline;
+        border: 0;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+    }
+    #app{
+      display: flex;
+      justify-content: space-between;
+      overflow-y: hidden;
+    }
 </style>
